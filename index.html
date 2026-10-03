@@ -1,1 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My AI App</title>
+</head>
+<body>
+  <h1>🤖 My AI App</h1>
+  <p>Welcome to my first AI app!</p>
 
+  <input type="text" id="question" placeholder="Ask something...">
+  <button onclick="askAI()">Ask AI</button>
+
+  <p id="answer"></p>
+
+  <script>
+    function askAI() {
+      const question = document.getElementById("question").value;
+
+      if (question.trim() === "") {
+        document.getElementById("answer").innerText =
+          "Please type a question.";
+        return;
+      }
+
+      document.getElementById("answer").innerText =
+        "You asked: " + question;
+    }
+  </script>
+</body>
+</html>
